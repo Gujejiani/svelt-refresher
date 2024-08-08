@@ -1,7 +1,8 @@
 import './app.css';
-import App from './App.svelte';
+import Example from './Example.svelte';
+// import App from './App.svelte';
 
-const app = new App({
+const app = new Example({
 	target: document.getElementById('app')
 });
 

@@ -3,7 +3,7 @@
   import { v4 as uuid } from 'uuid';
   import { tick, onMount } from 'svelte';
   import { identity } from 'svelte/internal';
-  import { fade } from 'svelte/transition';
+  import { fade ,slide} from 'svelte/transition';
 
   let todoList;
   let showList = true;
@@ -108,8 +108,8 @@
   Show/Hide list
 </label>
 {#if showList}
-<!-- fly is option giving direction -->
-  <div transition:fade style:max-width="400px">
+<!-- fly is option giving direction, in:slide  -->
+  <div  transition:fade style:max-width="400px">
     <TodoList
       {todos}
       {error}
