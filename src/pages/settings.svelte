@@ -34,8 +34,8 @@
 }} >Toggle Color Schema</button>
 
 <h2>{$settings.colorScheme}</h2>
-<!-- <label>
-    <input bind:group={colorScheme} type='radio' 
+<label>
+    <input bind:group={$settings.colorScheme} type='radio' 
           name="colorScheme"
           value="dark"
     />
@@ -44,9 +44,9 @@
 
 
 <label>
-    <input bind:group={colorScheme} type='radio' 
+    <input bind:group={$settings.colorScheme} type='radio' 
           name="colorScheme"
           value="light"
     />
    Light 
-</label> -->
+</label>

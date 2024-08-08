@@ -1,11 +1,11 @@
 <script>
   import { onMount } from 'svelte';
-
+    
 
 import Home from './pages/home.svelte';
 import Settings from './pages/settings.svelte';
 
-
+import settings from './store/settings'
 let page
 
 function onRouteChange(){
@@ -25,8 +25,30 @@ onMount(onRouteChange);
 <nav>
         <a href="#/">home</a>
         <a href="#/settings">Settings</a>
+        
 </nav>
 
+
+<svelte:head >
+{ #if $settings.colorScheme === 'dark'}
+
+<style>
+    :root {
+        --background-color: #1d1d1d;
+        --color: #fff;
+    }
+</style>
+{:else}
+<style>
+    :root {
+        --background-color: light;
+        --color: #000;
+    }
+</style>
+{/if}
+
+
+</svelte:head>
 
 {#if page === 'home'}
     <Home />
